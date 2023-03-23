@@ -1,49 +1,61 @@
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'IBM Plex Serif',Serif;
-  background: #f3f3f3;
+* {
+    margin: 0;
+    padding: 0;
 }
+
+body {
+
+    background-color: #f3f3f3;
+    margin-top: 50px;
+    font-family: 'IBM Plex Serif',Serif;
+}
+
 h1,h2,h3 {
     margin: 0;
     font-family: 'IBM Plex Sans',Serif;
+    font-weight: 600;
 }
-p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 24px;
-}
-a {
-    color: #005eeb;
-}
-a:hover {
-  color: #ff9900;
-}
-.teamWrapper {
 
-  margin-top: 50px;
-    
+.bg-primary-color {
+  background-color: #fff;
+}
+
+.bg-secondary-color {
+  background-color: #fff;
+}
+
+.bg-dark-color {
+  background-color: #050505;
+}
+
+.primary-color {
+  color: #050505;
+}
+
+.secondary-color {
+  color: #7a7a7a;
+}
+.title {
+    margin-top: -70px;
+    font-size: 28px;
 }
 .container {
-  --container: 1160px;
-  max-width: var(--container);
-  margin: auto;
-  font-size: 18px; 
-}
-.equipe {
-    margin-top: 15px;
-}
-.equipe p {
-    font-size: 25px;
-    font-family: 'IBM Plex Sans',serif;
-    font-weight: 400;
+    max-width: 1500px;
+    margin-bottom: 50px;
 }
 
 .teamGrid {
-    display: grid;
-    grid-template-columns: 32.33% 32.33% 32.33%;
-    column-gap: 1.5%;
-    margin-top: 100px;
+    justify-content: center;
+    gap: 20px;
+}
+.equipe {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.equipe p {
+    font-size: 30px;
+    font-family: 'IBM Plex Sans',serif;
+    font-weight: 400;
 }
 .avatar {
     position: absolute;
@@ -52,23 +64,52 @@ a:hover {
     top: -80px;
     text-align: center;
 }
-.teamcolinner {
-    position: relative; 
-}
 .avatar > img {
     width: 150px;
     margin: auto;
     border-radius: 50%;   
 }
+.member-name {
+    font-size: 35px;
+    margin-top: 60px;
+
+}
+.member-info {
+    font-size: 18px;
+    padding: 10px 10px;
+    margin-top: 15px;
+}
+.social-listing {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+.social-listing >li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: #f4f5f7;
+    border-radius: 50%;
+    margin: 5px;
+}
+
 .teamcolinner {
     position: relative;
     border: 1px dashed #ddd;
     min-height: 100px;
     background: #fff;
     z-index: 9;
+    padding-bottom: 0;
 }
+
 .teamcol {
     padding: 15px;
+    margin-top: 50px;
     margin-bottom: 100px;
     background: #fff;
     border-radius: 10px;
@@ -106,31 +147,8 @@ a:hover {
     width: 100%;
     transition: width 1s ease-in-out;
 }
-.member-name {
-    margin-top: 80px;
-}
-.member-info {
-    padding: 10px 20px;
-}
-.social-listing {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    list-style: none;
-    padding: 0;
-}
-.social-listing >li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    background: #f4f5f7;
-    border-radius: 50%;
-    margin: 5px;
-}
-.Button {
-	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+.btn {
+  box-shadow:inset 0px 1px 0px 0px #97c4fe;
 	background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
 	background-color:#3d94f6;
 	border-radius:6px;
@@ -142,65 +160,104 @@ a:hover {
 	font-size:15px;
 	font-weight:bold;
 	padding:6px 24px;
+  margin-bottom: 8px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #1570cd;
 }
-.Button:hover {
+.btn:hover {
 	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
 	background-color:#1e62d0;
     color: #f4f5f7;
 }
-.Button:active {
+.btn:active {
 	position:relative;
 	top:1px;
-}   
-
-.btn {
-    text-align: center;
-    
-}
-.btn a {
-    font-family: 'IBM Plex Serif',Serif;
-}
+} 
 .logo {
-    
-    margin-left:140px;
-    margin-top: -20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 140px;
     width: 180px;
     height: 120px;
-    position: absolute;  
+    position: relative; 
 }
 .logo2 {
-    margin-right:150px;
-    margin-top: -10px;
-    width: 150px;
-    height: 80px;
-    float: right;
+
+    width: 130px;
+    height: 70px;
+    
 }
-.botao-desativar {
-    pointer-events: none;
-    opacity: 50%;
-    color: #333c4c;
+.botao-desativar{
+  text-decoration: none;
+  pointer-events: none;
+  opacity: 50%;
+  color: #333c4c;
 }
-@media screen and (max-width: 767px) {
-    .teamWrapper .teamcolinner {
-      margin-left: 2.8%;
-      margin-top: 3%;
-      width: 46%;
-    }
-    .container {
-      height: 285px;
-    }
-    .teamGrid {
-      margin-bottom: 3%;
-    }
-  }
+.btn-desativado {
+  box-shadow:inset 0px 1px 0px 0px #333c4c;
+	background:linear-gradient(to bottom, #333c4c 5%, #333c4c 100%);
+	background-color:#333c4c;
+	border-radius:6px;
+	border:1px solid #333c4c;
+	display:inline-block;
+	pointer-events: none;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+  margin-bottom: 8px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #333c4c;
+}
+
+/* MINI BANNERS */
+
+
+#mini-banners .card {
+  padding: 5em 0.3em;
+  border-radius: 0;
   
-  @media screen and (max-width: 480px) {
-    .container {
-      width: 94.5%;
+}
+
+#mini-banners i {
+  font-size: 4em;
+}
+
+#mini-banners .card-title {
+  margin-bottom: 1.5em;
+}
+
+#mini-banners .btn {
+  margin-top: 1.5em;
+  padding: 0.6em 1.2em;
+}
+
+@media screen and (max-width: 800px) {
+    .equipe , .title {
+        margin-top: 20px;
     }
-    .teamGrid {
-      height: 260px;
-    }
+}
+
+@media (min-width: 768px) {
+  .banners {
+    margin-top: -6em;
   }
+}
+
+@media (min-width: 768px) {
+  .container  {
+    padding-right: 2em;
+  }
+
+  #contact-container {
+    padding: 0 2em;
+    border-left: 1px solid #7a7a7a;
+    border-right: 1px solid #7a7a7a;
+  }
+
+  #links-container {
+    padding-left: 2em;
+  }
+}
